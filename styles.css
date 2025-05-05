@@ -265,12 +265,16 @@ a:visited h2 {
 
 
 @media screen and (max-width: 500px) {
+  html, body{
+    overflow: hidden;
+  }
     h1{
       font-size: 2rem;
     
     }
     .content{
         width: 100%;
+      min-width: 100%;
        max-height: calc(100% - 2rem);
     }
     .svg-carousel{
