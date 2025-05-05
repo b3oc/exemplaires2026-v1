@@ -276,7 +276,11 @@ a:visited h2 {
   h1{
     font-size: 1.15rem;
   }
-   
+ 
+  .footer {
+    height: 1.5rem;
+    backdrop-filter: none;
+  }
     .content{
         width: 100%;
        height: calc(100% - 4rem);
