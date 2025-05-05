@@ -274,10 +274,7 @@ a:visited h2 {
 @media screen and (max-width: 500px) {
   
   
-    h1{
-      font-size: 2rem;
-    
-    }
+   
     .content{
         width: 100%;
       min-width: 100%;
