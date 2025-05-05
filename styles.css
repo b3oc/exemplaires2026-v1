@@ -279,8 +279,8 @@ a:visited h2 {
    
     .content{
         width: 100%;
-      min-width: 100%;
-       max-height: calc(100% - 2rem);
+       height: calc(100% - 3rem);
+       max-height: calc(100% - 3rem);
       flex-direction: column;
     }
     .svg-carousel{
