@@ -181,7 +181,7 @@ a:visited h2 {
 .svg-carousel {
   position: absolute;
   top: 0.5rem;
-  height: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
   width: 50%;
   display: flex;
   justify-content: center;
@@ -274,8 +274,13 @@ a:visited h2 {
 
 
 @media screen and (max-width: 500px) {
+    h1{
+      font-size: 2rem;
+    
+    }
     .content{
         width: 100%;
+       max-height: calc(100% - 2rem);
     }
     .svg-carousel{
         height: 100%;
