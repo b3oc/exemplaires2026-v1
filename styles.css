@@ -350,7 +350,7 @@ width: 50%;
     font-size: 1.05rem;
   }
   .page-content{
-    height: calc(80%);
+    height: calc(84%);
   }
   
   .footer {
@@ -360,8 +360,8 @@ width: 50%;
   }
     
     .svg-carousel{
-       
-        max-width: 49vw; 
+        height: 100%;
+        max-width: 49%; 
     }
 }
 
