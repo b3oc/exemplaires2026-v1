@@ -304,7 +304,7 @@ width: 50%;
 .svg-carousel.right .slide2 { animation-delay: 4.5s; }   
 .svg-carousel.right .slide3 { animation-delay: 6s; }     
 
-.svg-carousel.right .slide1.alt { animation-delay: 10.5s; } 
+.svg-carousel.right .slide1.alt { animation-delay: 10s; } 
 .svg-carousel.right .slide2.alt { animation-delay: 12s; }   
 .svg-carousel.right .slide3.alt { animation-delay: 15.5s; }   
 
