@@ -376,7 +376,9 @@ width: 50%;
 
 
 @media screen and (max-width: 500px) {
-  
+  body{
+    overflow: hidden;
+  }
   h1{
     font-size: 1rem;
   }
