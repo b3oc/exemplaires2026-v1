@@ -104,7 +104,7 @@ a:visited h1 {
 }
 
 h2{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'obg';
     color: black;
     font-weight: 500;
@@ -379,6 +379,9 @@ width: 50%;
   
   h1{
     font-size: 1rem;
+  }
+  h2{
+    font-size: 0.8rem;
   }
   .page-content{
     height: calc(100% - 4rem);
