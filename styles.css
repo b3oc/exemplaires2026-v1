@@ -313,8 +313,36 @@ width: 50%;
   color: white;
 }
 
+/* BG audio play */
+@keyframes underlineBlink {
+  0%, 100% {
+    text-decoration-color: transparent;
+  }
+  50% {
+    text-decoration-color: var(--underline-color, black);
+  }
+}
+
+.blinking {
+  text-decoration: underline;
+  text-decoration-color: black;
+  animation: underlineBlink 0.8s infinite;
+}
+#audioToggle:hover .blinking {
+  --underline-color: #FF7AAB;
+}
+.static-underline {
+  text-decoration: underline;
+  animation: none;
+}
+
+
 #audioToggle h2{
   text-decoration: underline;
+}
+
+#audioToggle h2:hover{
+  color: #FF7AAB;
 }
 
 /* Footer */

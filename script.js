@@ -8,9 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (audio.paused) {
       audio.play();
       label.textContent = "Pause";
+      label.classList.remove("blinking");
+      label.classList.add("static-underline");
     } else {
       audio.pause();
       label.textContent = "Play";
+      label.classList.remove("static-underline");
+      label.classList.add("blinking");
     }
   });
 });
