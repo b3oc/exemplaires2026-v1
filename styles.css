@@ -12,9 +12,9 @@ html{
 }
 body {
     background: linear-gradient(0deg, #765BA7 14%, #FF1C26 35%, #FF7AAB 67%, #FFF875 89%);
-    background-size: 100% 110%; 
+    background-size: 100% 120%; 
     background-position: 0% 0%;
-    animation: gradientShiftVertical 6s ease-in-out infinite;
+    animation: gradientShiftVertical 7s ease-in-out infinite;
     padding: 1rem;   
     height: 100vh;
     width: 100vw;
