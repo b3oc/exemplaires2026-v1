@@ -11,10 +11,10 @@ html{
     height: 100%;
 }
 body {
-    background: linear-gradient(0deg, #765BA7, #FF1C26, #FF7AAB, #FFF875); 
-    background-size: 100% 130%; 
+    background: linear-gradient(0deg, #765BA7 14%, #FF1C26 35%, #FF7AAB 67%, #FFF875 89%);
+    background-size: 100% 110%; 
     background-position: 0% 0%;
-    animation: gradientShiftVertical 4s ease-in-out infinite;
+    animation: gradientShiftVertical 6s ease-in-out infinite;
     padding: 1rem;   
     height: 100vh;
     width: 100vw;
@@ -30,11 +30,11 @@ body::after {
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(pink 0.5px, transparent 0.5px),
-    radial-gradient(violet 0.5px, transparent 0.5px);
+  radial-gradient(pink 0.5px, transparent 0.5px),
+  radial-gradient(violet 0.5px, transparent 0.5px);
   background-position: 0 0, 2px 2px;
   background-size: 4px 4px;
-    transform: rotate(0deg);
+  transform: rotate(0deg);
   opacity: 0.3;
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -73,6 +73,9 @@ body::after {
 }
 
 
+a {
+    text-decoration: none; 
+}
 
 h1 {
     font-family: 'obg';
@@ -80,15 +83,28 @@ h1 {
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 110%; /* 2.2rem */
+    line-height: 110%; 
    
     
 }
 
+a h1{
+  color: black;
 
+}
+
+a h1:hover{
+  color: #FF7AAB;
+  text-decoration: underline;
+}
+
+a:visited h1 {
+  color: black;
+  
+}
 
 h2{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'obg';
     color: black;
     font-weight: 500;
@@ -97,25 +113,19 @@ h2{
    
 }
 
-a {
-    text-decoration: none; 
-}
+
 
 a h2 {
   color: black;
   text-decoration: underline;
-  transition: color 0.1s ease;
 }
 
 a:hover h2 {
   color: #FF7AAB;
-  text-decoration: underline;
+
 }
 
-a:visited h2 {
-  color: black;
-    text-decoration: none;
-}
+
 
 .page{
     display: flex;
@@ -126,25 +136,30 @@ a:visited h2 {
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
+   
     
 }
 .page-content{
     display: flex;
     width: 100%;
-    height: calc(100% - 2rem);
+    height: calc(100% - 3rem);
+    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
+  
     flex-shrink: 0;
+    align-self: stretch;
+    position: relative;
 }
 
 
 
-
+/*
 .content{
   
     display: flex;
     height: 100%;
-    width: calc(50% - 1rem);
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -154,19 +169,45 @@ a:visited h2 {
     position: relative;
     
 }
+*/
 
-/* ��|8 */
+.content{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  align-self: stretch;
+  animation: breathingGlow 3s ease-in-out infinite;
+  position: relative;
+}
 
+.row3 h1{
+ opacity: 0.9;
+}
+.content.row3{
+  position: relative;
+  z-index: 4;
+  mix-blend-mode:normal;
+}
+.content.row2{
+  position: relative;
+  z-index: 0;
+}
+.content.row1{
+  position: relative;
+  z-index: 2;
+}
 @keyframes breathingGlow {
   0%, 100% {
-    filter: brightness(2);
+    filter: brightness(1.4);
   }
   50% {
     filter: brightness(0.9);
   }
 }
 
-
+/*
 .info{
     display: flex;
     justify-content: space-between;
@@ -178,12 +219,23 @@ a:visited h2 {
     
 
 }
+*/
 
+.info{
+ 
+  width: calc(50%);
+  display: flex;
+align-items: flex-start;
+gap: 1.25rem;
+flex-shrink: 0;
+grid-row: 1 / span 1;
+grid-column: 1 / span 1;
+}
 
 
 .event{
     
-    width: 50%;
+width: 50%;
    
 
 }
@@ -193,25 +245,29 @@ a:visited h2 {
 .svg-carousel {
   position: absolute;
   top: 0.5rem;
-  height: calc(100% - 3rem);
+  height: calc(100%);
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  z-index: 2; 
-  opacity: 0.9; 
+  
+  
+  opacity: 1; 
   flex-shrink: 0;
+  
 
    
 }
 
 .svg-carousel.left {
   left: 0;
+  z-index: 3; 
 }
 
 .svg-carousel.right {
   right: 0;
+  z-index: 1; 
 }
 
 .svg-slide {
@@ -223,14 +279,15 @@ a:visited h2 {
     opacity: 0;
     animation: fadeCycle 18s linear infinite;
   
+  
 }
 
 
 
 @keyframes fadeCycle {
   0%     { opacity: 0; }
-  2%     { opacity: 1; }  
-  8.5%   { opacity: 1; } 
+  0.6%     { opacity: 1; }  
+  9%   { opacity: 1; } 
   10.5%  { opacity: 0; } 
   100%   { opacity: 0; }
 }
@@ -260,22 +317,28 @@ a:visited h2 {
 
 /* Footer */
 .footer{
-    display: inline;
-    background-color: rgba(255, 255, 255, 0.0);
-    left: 0;
-    padding-left: 1rem;
-    height: 1.8rem;
-    width: 100%;
-    align-content: flex-start;
-    position: fixed;     
-    bottom: 0;
-    z-index: 99;
-    backdrop-filter: blur(6px);    
+    
+  background-color: rgba(255, 255, 255, 0.0);
+  left: 0;
+  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem;
+  width: 100%;
+  align-content: flex-start;
+  position: fixed;     
+  bottom: 0;
+  z-index: 99;
+  backdrop-filter: blur(6px);    
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
   
 }
 
-@media screen and (max-width: 1240px) {
-    .content{
+@media screen and (max-width: 1200px) {
+    .info{
         width: 100%;
     }
  
@@ -285,22 +348,21 @@ a:visited h2 {
 @media screen and (max-width: 500px) {
   
   h1{
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
- 
+  .page-content{
+    height: calc(100% - 3rem);
+  }
+  
   .footer {
     height: 1.5rem;
     backdrop-filter: none;
+    max-width: 100%;
   }
-    .content{
-        width: 100%;
-       height: calc(100% - 4rem);
-       max-height: calc(100% - 4rem);
-      flex-direction: column;
-    }
+    
     .svg-carousel{
         height: 100%;
-        max-width: 49%; 
+        max-width: 47%; 
     }
 }
 
