@@ -347,11 +347,11 @@ width: 50%;
 @media screen and (max-width: 500px) {
   
   h1{
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
   .page-content{
-    height: calc(100% - 3rem);
-    padding-bottom: 2rem;
+    height: calc(100% - 4rem);
+    padding-bottom: 3rem;
   }
   
   .footer {
