@@ -313,6 +313,9 @@ width: 50%;
   color: white;
 }
 
+#audioToggle h2{
+  text-decoration: underline;
+}
 
 /* Footer */
 .footer{
