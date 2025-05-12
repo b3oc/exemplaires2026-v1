@@ -350,11 +350,11 @@ width: 50%;
     font-size: 1.05rem;
   }
   .page-content{
-    height: calc(82%);
+    height: calc(100% - 4rem);
   }
   
   .footer {
-    height: 1.5rem;
+    height: 3rem;
     backdrop-filter: none;
     max-width: 100%;
   }
