@@ -387,8 +387,8 @@ width: 50%;
     font-size: 0.8rem;
   }
   .page-content{
-    min-height: calc(100vh - 3rem);
-    padding-bottom: 3rem;
+    flex-grow: 1;
+    padding-bottom: 2rem;
   }
   
   .footer {
