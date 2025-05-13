@@ -387,7 +387,7 @@ width: 50%;
     font-size: 0.8rem;
   }
   .page-content{
-    height: calc(100% - 4rem);
+    height: calc(100vh - 3rem);
     padding-bottom: 3rem;
   }
   
