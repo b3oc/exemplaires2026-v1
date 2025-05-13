@@ -14,6 +14,8 @@ html, body {
     overscroll-behavior: none; 
 }
 body {
+    display: flex; 
+    flex-direction: column; 
     background: linear-gradient(0deg, #765BA7 14%, #FF1C26 35%, #FF7AAB 67%, #FFF875 89%);
     background-size: 100% 120%; 
     background-position: 0% 0%;
@@ -145,13 +147,15 @@ a:hover h2 {
 .page-content{
     display: flex;
     width: 100%;
-    height: calc(100% - 3rem);
+    /*height: calc(100% - 3rem);*/
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
     align-self: stretch;
     position: relative;
+    padding-bottom: 2rem;
 }
 
 
@@ -247,19 +251,14 @@ width: 50%;
 .svg-carousel {
   position: absolute;
   top: 0.5rem;
-  height: calc(100%);
+  height: calc(100% - 2rem);
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  
-  
   opacity: 1; 
   flex-shrink: 0;
-  
-
-   
 }
 
 .svg-carousel.left {
@@ -379,21 +378,14 @@ width: 50%;
 
 
 @media screen and (max-width: 500px) {
- body, html {
-
-  display: flex;
-  flex-direction: column;
-}
+ 
   h1{
     font-size: 1rem;
   }
   h2{
     font-size: 0.8rem;
   }
-  .page-content{
-    flex-grow: 1;
-    padding-bottom: 2rem;
-  }
+  
   
   .footer {
     height: 1.5rem;
