@@ -1,29 +1,29 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;      
-    touch-action: none;    
-    overscroll-behavior: none; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;      
+  touch-action: none;    
+  overscroll-behavior: none; 
 }
 body {
-    display: flex; 
-    flex-direction: column; 
-    background: linear-gradient(0deg, #765BA7 14%, #FF1C26 35%, #FF7AAB 67%, #FFF875 89%);
-    background-size: 100% 120%; 
-    background-position: 0% 0%;
-    animation: gradientShiftVertical 7s ease-in-out infinite;
-    padding: 1rem;   
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+  display: flex; 
+  flex-direction: column; 
+  background: linear-gradient(0deg, #765BA7 14%, #FF1C26 35%, #FF7AAB 67%, #FFF875 89%);
+  background-size: 100% 120%; 
+  background-position: 0% 0%;
+  animation: gradientShiftVertical 7s ease-in-out infinite;
+  padding: 1rem;   
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 
@@ -77,18 +77,16 @@ body::after {
 
 
 a {
-    text-decoration: none; 
+  text-decoration: none; 
 }
 
 h1 {
-    font-family: 'obg';
-    color: black;
-    font-size: 1.4rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 110%; 
-   
-    
+  font-family: 'obg';
+  color: black;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;   
 }
 
 a h1{
@@ -107,12 +105,12 @@ a:visited h1 {
 }
 
 h2{
-    font-size: 1rem;
-    font-family: 'obg';
-    color: black;
-    font-weight: 500;
-    line-height: 100%; 
-    display: inline-block;
+  font-size: 1rem;
+  font-family: 'obg';
+  color: black;
+  font-weight: 500;
+  line-height: 100%; 
+  display: inline-block;
    
 }
 
@@ -131,28 +129,28 @@ a:hover h2 {
 
 
 .page{
-    display: flex;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
    
     
 }
 .page-content{
-    display: flex;
-    width: 100%;
-    /*height: calc(100% - 3rem);*/
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-shrink: 0;
-    align-self: stretch;
-    position: relative;
+  display: flex;
+  width: 100%;
+  /*height: calc(100% - 3rem);*/
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  align-self: stretch;
+  position: relative;
   padding-bottom: 2rem;
 }
 
@@ -216,11 +214,11 @@ a:hover h2 {
  
   width: calc(50%);
   display: flex;
-align-items: flex-start;
-gap: 1.25rem;
-flex-shrink: 0;
-grid-row: 1 / span 1;
-grid-column: 1 / span 1;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
 }
 
 
@@ -263,11 +261,8 @@ width: 50%;
     width: auto;
     height: auto;
     opacity: 0;
-    animation: fadeCycle 18s linear infinite;
-  
-  
+    animation: fadeCycle 18s linear infinite;  
 }
-
 
 
 @keyframes fadeCycle {
@@ -333,11 +328,9 @@ width: 50%;
 }
 
 /* Footer */
-.footer{
-    
+.footer{    
   background-color: rgba(255, 255, 255, 0.0);
-  left: 0;
-  
+  left: 0; 
   padding-left: 1rem;
   padding-right: 1rem;
   height: 2rem;
@@ -355,9 +348,9 @@ width: 50%;
 }
 
 @media screen and (max-width: 1200px) {
-    .info{
-        width: 100%;
-    }
+  .info{
+    width: 100%;
+  }
  
 }
 
@@ -377,10 +370,10 @@ width: 50%;
     max-width: 100%;
   }
     
-    .svg-carousel{
-        height: 100%;
-        max-width: 49%; 
-    }
+  .svg-carousel{
+    height: 100%;
+    max-width: 49%; 
+  }
 }
 
 
