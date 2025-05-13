@@ -379,7 +379,11 @@ width: 50%;
 
 
 @media screen and (max-width: 500px) {
- 
+ body, html {
+
+  display: flex;
+  flex-direction: column;
+}
   h1{
     font-size: 1rem;
   }
