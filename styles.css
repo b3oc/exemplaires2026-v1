@@ -358,10 +358,6 @@ width: 50%;
     .info{
         width: 100%;
     }
-  .page-content{
-    flex-grow: 1;
-    padding-bottom: 2rem;
-  }
  
 }
 
@@ -374,12 +370,7 @@ width: 50%;
   h2{
     font-size: 0.8rem;
   }
-  /*
-  .page-content{
-    flex-grow: 1;
-    padding-bottom: 2rem;
-  }
-  */
+  
   .footer {
     height: 1.5rem;
     backdrop-filter: none;
