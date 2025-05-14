@@ -194,17 +194,22 @@ a:hover h2 {
   width: 50%;
 }
 
-.event.link h1 {
-  display: flex;
-  gap: -0.3em; /* 控制 @ 和链接之间的间距 */
-  align-items: baseline; /* 保持文字基线对齐 */
-}
 .event.link h1 a {
-  text-decoration: underline;
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+
 }
 
-.event.link h1 a:hover{
+.event.link h1 a .no-underline {
+  text-decoration: none;
+}
+
+.event.link h1 a .underline {
+  text-decoration: underline;
+}
+
+.event.link h1 a:hover {
   color: #FF7AAB;
 }
 
