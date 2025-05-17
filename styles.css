@@ -309,10 +309,15 @@ a:hover h2 {
   }
 }
 
+.music{
+  display: none;
+}
+
 .blinking {
   text-decoration: underline;
   text-decoration-color: black;
   animation: underlineBlink 0.8s infinite;
+  
 }
 #audioToggle:hover .blinking {
   --underline-color: #FF7AAB;
