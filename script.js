@@ -1,20 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const audio = document.getElementById("bgMusic");
+  const iframe = document.getElementById("scPlayer");
+  const widget = SC.Widget(iframe);
   const toggleBtn = document.getElementById("audioToggle");
+  const label = toggleBtn.querySelector("h2");
+
+  let isPlaying = false;
 
   toggleBtn.addEventListener("click", function () {
-    const label = toggleBtn.querySelector("h2");
-
-    if (audio.paused) {
-      audio.play();
+    if (!isPlaying) {
+      widget.play();
       label.textContent = "Pause";
       label.classList.remove("blinking");
       label.classList.add("static-underline");
     } else {
-      audio.pause();
+      widget.pause();
       label.textContent = "Play";
       label.classList.remove("static-underline");
       label.classList.add("blinking");
     }
+    isPlaying = !isPlaying;
   });
 });
