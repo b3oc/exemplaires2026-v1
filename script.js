@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
           label.classList.add("static-underline");
         }
       });
-    }, 500);
+    }, 300);
   });
 
   // ✅ 用户首次交互（点击或滚动）播放
