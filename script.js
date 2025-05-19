@@ -41,8 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  document.addEventListener("click", tryStartMusic, { once: true });
-  document.addEventListener("scroll", tryStartMusic); // 不加 once，手动 remove
+  // 用户首次交互（点击 / 滚动 / 触摸 / 按键）触发播放
+    document.addEventListener("click", tryStartMusic, { once: true });
+    document.addEventListener("scroll", tryStartMusic);
+    document.addEventListener("touchstart", tryStartMusic, { once: true });
+    document.addEventListener("keydown", tryStartMusic, { once: true }); 
+
 
   // ✅ 播放按钮控制
   toggleBtn.addEventListener("click", function (e) {
