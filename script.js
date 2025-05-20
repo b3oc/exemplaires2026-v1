@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const iframe = document.getElementById("scPlayer");
   const toggleBtn = document.getElementById("audioToggle");
@@ -8,10 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let isPlaying = false;
   let hasStarted = false;
 
-  // ✅ 自动播放逻辑（只有在 widget 准备好之后才能触发）
+  // 自动播放逻辑（只有在 widget 准备好之后才能触发）
   widget.bind(SC.Widget.Events.READY, function () {
     widget.play();
 
+     // 播放结束时自动重新播放，实现循环
+    widget.bind(SC.Widget.Events.FINISH, function () {
+      widget.play();
+    });
+    
     // 检查是否成功播放
     setTimeout(() => {
       widget.isPaused(function (paused) {
@@ -26,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 300);
   });
 
-  // ✅ 用户首次交互（点击或滚动）播放
+  // 用户首次交互（点击或滚动）播放
   const tryStartMusic = function () {
     if (!hasStarted) {
       widget.play();
@@ -48,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keydown", tryStartMusic, { once: true }); 
 
 
-  // ✅ 播放按钮控制
+  // 播放按钮控制
   toggleBtn.addEventListener("click", function (e) {
     e.stopPropagation(); // 避免触发首次播放逻辑
 
